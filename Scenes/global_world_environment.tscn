@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://888lunbamstb"]
+
+[sub_resource type="Environment" id="Environment_rqg18"]
+adjustment_enabled = true
+adjustment_brightness = 2.0
+
+[node name="GlobalWorldEnvironment" type="WorldEnvironment" unique_id=1685752492]
+environment = SubResource("Environment_rqg18")

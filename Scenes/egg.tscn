@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dkv4aykvwgv7m"]
+
+[ext_resource type="Shader" uid="uid://j70rbs5jvhmg" path="res://shaders/egg_glow.gdshader" id="1_1iuog"]
+[ext_resource type="Texture2D" uid="uid://cxsapbnnvb275" path="res://Art/egg.png" id="2_85tk0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7piv4"]
+shader = ExtResource("1_1iuog")
+shader_parameter/speed = 0.3
+shader_parameter/glow_strength = 0.8
+shader_parameter/edge_softness = 0.17200000817
+shader_parameter/color = Color(0.9396779, 0.94163066, 0.7562064, 1)
+
+[node name="Node2D" type="Node2D" unique_id=2062417103]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1545276636]
+material = SubResource("ShaderMaterial_7piv4")
+offset_left = -121.00001
+offset_top = -125.0
+offset_right = -81.00001
+offset_bottom = -85.0
+scale = Vector2(6.179423, 5.971981)
+
+[node name="Egg" type="Sprite2D" parent="." unique_id=1222591481]
+scale = Vector2(3.657948, 3.5819657)
+texture = ExtResource("2_85tk0")

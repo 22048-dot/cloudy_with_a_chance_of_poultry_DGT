@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://lv4w4v8c0t74"]
+
+[ext_resource type="Script" uid="uid://bbgqj13yljrs8" path="res://Scripts/options.gd" id="1_kftxf"]
+[ext_resource type="Texture2D" uid="uid://bh2t82wpa6lff" path="res://Art/MAIN_MENU.png" id="1_prnvy"]
+[ext_resource type="AudioStream" uid="uid://c3a8ngyk34iyi" path="res://Sounds_design/jumpingbunny-acoustic-like-country-382752.mp3" id="2_qyyw6"]
+[ext_resource type="FontFile" uid="uid://b5lb6ioee40w2" path="res://Art/DemoslmoofarmRegular-zr8xD.otf" id="3_ww8vx"]
+[ext_resource type="FontFile" uid="uid://d1dbv4fo76ug1" path="res://Art/Bull Ride.ttf" id="5_663nc"]
+
+[node name="options" type="Node2D" unique_id=1245243883]
+script = ExtResource("1_kftxf")
+
+[node name="visuals" type="Node2D" parent="." unique_id=1710042658]
+
+[node name="Sprite2D" type="Sprite2D" parent="visuals" unique_id=1939595614]
+position = Vector2(801.55145, 380)
+scale = Vector2(3.4456408, 2.933754)
+texture = ExtResource("1_prnvy")
+
+[node name="shadow" type="ColorRect" parent="visuals" unique_id=1874075745]
+offset_left = -166.0
+offset_top = -171.0
+offset_right = 1677.0
+offset_bottom = 896.0
+color = Color(0, 0, 0, 0.7490196)
+
+[node name="panel" type="ColorRect" parent="visuals" unique_id=1992418437]
+offset_left = 143.0
+offset_top = 60.0
+offset_right = 1478.0
+offset_bottom = 794.0
+color = Color(0.01260527, 0.00058939017, 9.400537e-10, 0.8)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=986479668]
+position = Vector2(794, 410)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1947566184]
+stream = ExtResource("2_qyyw6")
+autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=75274639]
+offset_left = 672.0
+offset_top = 108.0
+offset_right = 979.0
+offset_bottom = 208.0
+theme_override_fonts/font = ExtResource("3_ww8vx")
+theme_override_font_sizes/font_size = 100
+text = "OPTIONS"
+
+[node name="back to menu" type="Button" parent="." unique_id=1620705333]
+offset_left = 696.0
+offset_top = 613.0
+offset_right = 947.0
+offset_bottom = 757.0
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 50
+text = "Back"
+flat = true
+
+[node name="brightness" type="HSlider" parent="." unique_id=1031463233]
+offset_left = 391.0
+offset_top = 327.0
+offset_right = 1304.0
+offset_bottom = 343.0
+min_value = 0.2
+max_value = 1.5
+step = 0.1
+value = 0.5
+
+[node name="Label" type="Label" parent="brightness" unique_id=130568514]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -5.0
+offset_right = -10.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("5_663nc")
+text = "Brightness"
+
+[node name="volume" type="HSlider" parent="." unique_id=702707083]
+offset_left = 388.0
+offset_top = 373.0
+offset_right = 1302.0
+offset_bottom = 389.0
+max_value = 15.0
+
+[node name="Label" type="Label" parent="volume" unique_id=1474906284]
+layout_mode = 0
+offset_left = -93.0
+offset_top = -5.0
+offset_right = -34.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("5_663nc")
+text = "Volume"
+
+[connection signal="pressed" from="back to menu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="value_changed" from="brightness" to="." method="_on_brightness_value_changed"]
+[connection signal="value_changed" from="volume" to="." method="_on_volume_value_changed"]

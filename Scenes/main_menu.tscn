@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://bwllg5oie82dw"]
+
+[ext_resource type="Script" uid="uid://dxsxyrvhfve8t" path="res://Scripts/buttons.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://djif2jh1cfmfn" path="res://Art/panel.png" id="1_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://bh2t82wpa6lff" path="res://Art/MAIN_MENU.png" id="2_48xlc"]
+[ext_resource type="FontFile" uid="uid://b5lb6ioee40w2" path="res://Art/DemoslmoofarmRegular-zr8xD.otf" id="2_opfnp"]
+[ext_resource type="FontFile" uid="uid://d1dbv4fo76ug1" path="res://Art/Bull Ride.ttf" id="3_1ehe0"]
+[ext_resource type="AudioStream" uid="uid://c3a8ngyk34iyi" path="res://Sounds_design/jumpingbunny-acoustic-like-country-382752.mp3" id="4_ce3w2"]
+[ext_resource type="PackedScene" path="res://Scenes/scene_transition_animation.tscn" id="6_opfnp"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_n45e2"]
+polygon = PackedVector2Array(145.4179, 273.17175, 226.88982, 196.7674, 361.88687, 135.53925, 378.93915, 135.01593, 509.67313, 198.86067, 587.8293, 275.78836, 587.8293, 282.06818, 574.5664, 283.1148, 561.7772, 275.78836, 561.7772, 387.77832, 755.5099, 386.7317, 783.9303, 450.0531, -36.946564, 476.7423, -34.10452, 364.75235, -29.367779, 380.9752, -17.999605, 390.9182, 29.841457, 390.3949, 27.473091, 158.0419, 35.525547, 156.47195, 35.051872, 149.14551, 44.051678, 149.14551, 45.94637, 156.47195, 53.05148, 155.94862, 50.68311, 388.30164, 68.682724, 388.82495, 68.209045, 389.34827, 72.47211, 389.34827, 71.524765, 152.2854, 60.63026, 149.66882, 61.10394, 127.68949, 68.682724, 126.64285, 68.682724, 103.09357, 111.31337, 76.404366, 159.62811, 76.404366, 197.9957, 103.09357, 197.9957, 124.54958, 208.41653, 127.68949, 208.41653, 150.71545, 199.41672, 149.66882, 199.8904, 219.27005)
+
+[sub_resource type="Gradient" id="Gradient_opfnp"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cp0ys"]
+gradient = SubResource("Gradient_opfnp")
+
+[node name="Main_menu" type="Node2D" unique_id=71085118]
+scale = Vector2(1.6210556, 1.6345627)
+
+[node name="Panel" type="Sprite2D" parent="." unique_id=1520229573]
+position = Vector2(-204.1879, -466.7915)
+rotation = 3.1415927
+scale = Vector2(154.31055, -73.1165)
+texture = ExtResource("1_cp0ys")
+
+[node name="VISUAL_ASSETS" type="Node2D" parent="." unique_id=233361693]
+scale = Vector2(0.99999994, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="VISUAL_ASSETS" unique_id=127486195]
+position = Vector2(492.86343, 234.18282)
+scale = Vector2(2.102075, 1.7644147)
+texture = ExtResource("2_48xlc")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="VISUAL_ASSETS" unique_id=469183207]
+position = Vector2(25.292158, -1.8353536)
+scale = Vector2(1.3023348, 1.16905)
+occluder = SubResource("OccluderPolygon2D_n45e2")
+
+[node name="PointLight2D" type="PointLight2D" parent="VISUAL_ASSETS" unique_id=1567918681]
+position = Vector2(163.47372, 22.63601)
+rotation = -0.38129658
+scale = Vector2(32.976414, 27.328426)
+color = Color(1, 1, 1, 0.2)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_cp0ys")
+
+[node name="Label" type="Label" parent="VISUAL_ASSETS" unique_id=1378317559]
+offset_left = 273.27878
+offset_top = 17.741749
+offset_right = 1080.6968
+offset_bottom = 200.74174
+scale = Vector2(0.56766546, 0.6423615)
+theme_override_colors/font_color = Color(0.6576459, 0.079657294, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_opfnp")
+theme_override_font_sizes/font_size = 90
+text = "cloudy with a chance of
+POULTRY"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VISUAL_ASSETS" unique_id=110343004]
+offset_left = 275.74628
+offset_top = 14.682826
+offset_right = 1083.1643
+offset_bottom = 197.68283
+scale = Vector2(0.56766546, 0.6423615)
+theme_override_colors/font_color = Color(0.99999374, 0.44583023, 0.35619688, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_opfnp")
+theme_override_font_sizes/font_size = 90
+text = "cloudy with a chance of
+POULTRY"
+horizontal_alignment = 1
+
+[node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("6_opfnp")]
+visible = false
+
+[node name="BUTTONS" type="Node2D" parent="." unique_id=1032241151]
+position = Vector2(25.29216, -1.8353537)
+scale = Vector2(1.3023348, 1.16905)
+script = ExtResource("1_28flt")
+
+[node name="Play" type="Button" parent="BUTTONS" unique_id=1650188962]
+offset_left = 225.77882
+offset_top = 234.9252
+offset_right = 296.72025
+offset_bottom = 304.66864
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 12
+text = "PLAY"
+
+[node name="Options" type="Button" parent="BUTTONS" unique_id=699961003]
+offset_left = 331.26566
+offset_top = 234.9252
+offset_right = 401.5902
+offset_bottom = 304.0569
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 12
+text = "OPTION"
+
+[node name="Exit" type="Button" parent="BUTTONS" unique_id=1046107466]
+offset_left = 436.75247
+offset_top = 234.92522
+offset_right = 508.3108
+offset_bottom = 303.44507
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 12
+text = "EXIT"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1928557935]
+position = Vector2(25.292158, -1.8353536)
+scale = Vector2(1.3023348, 1.16905)
+stream = ExtResource("4_ce3w2")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=710169801]
+position = Vector2(494.73935, 231.25449)
+zoom = Vector2(0.87, 0.87)
+
+[connection signal="pressed" from="BUTTONS/Play" to="BUTTONS" method="_on_play_pressed"]
+[connection signal="pressed" from="BUTTONS/Options" to="BUTTONS" method="_on_options_pressed"]
+[connection signal="pressed" from="BUTTONS/Exit" to="BUTTONS" method="_on_exit_pressed"]
+
+[editable path="SceneTransitionAnimation"]
