@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://dxsxyrvhfve8t" path="res://Scripts/buttons.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://djif2jh1cfmfn" path="res://Art/panel.png" id="1_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://bh2t82wpa6lff" path="res://Art/MAIN_MENU.png" id="2_48xlc"]
-[ext_resource type="FontFile" uid="uid://b5lb6ioee40w2" path="res://Art/DemoslmoofarmRegular-zr8xD.otf" id="2_opfnp"]
-[ext_resource type="FontFile" uid="uid://d1dbv4fo76ug1" path="res://Art/Bull Ride.ttf" id="3_1ehe0"]
+[ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="3_opfnp"]
 [ext_resource type="AudioStream" uid="uid://c3a8ngyk34iyi" path="res://Sounds_design/jumpingbunny-acoustic-like-country-382752.mp3" id="4_ce3w2"]
 [ext_resource type="PackedScene" path="res://Scenes/scene_transition_animation.tscn" id="6_opfnp"]
 
@@ -47,28 +46,28 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_cp0ys")
 
 [node name="Label" type="Label" parent="VISUAL_ASSETS" unique_id=1378317559]
-offset_left = 273.27878
-offset_top = 17.741749
-offset_right = 1080.6968
-offset_bottom = 200.74174
+offset_left = 231.94768
+offset_top = 13.459257
+offset_right = 1219.9478
+offset_bottom = 200.45926
 scale = Vector2(0.56766546, 0.6423615)
 theme_override_colors/font_color = Color(0.6576459, 0.079657294, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_opfnp")
+theme_override_fonts/font = ExtResource("3_opfnp")
 theme_override_font_sizes/font_size = 90
 text = "cloudy with a chance of
 POULTRY"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="VISUAL_ASSETS" unique_id=110343004]
-offset_left = 275.74628
-offset_top = 14.682826
-offset_right = 1083.1643
-offset_bottom = 197.68283
+offset_left = 228.24635
+offset_top = 13.459257
+offset_right = 1216.2465
+offset_bottom = 200.45926
 scale = Vector2(0.56766546, 0.6423615)
 theme_override_colors/font_color = Color(0.99999374, 0.44583023, 0.35619688, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_opfnp")
+theme_override_fonts/font = ExtResource("3_opfnp")
 theme_override_font_sizes/font_size = 90
 text = "cloudy with a chance of
 POULTRY"
@@ -87,8 +86,17 @@ offset_left = 225.77882
 offset_top = 234.9252
 offset_right = 296.72025
 offset_bottom = 304.66864
-theme_override_fonts/font = ExtResource("3_1ehe0")
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("3_opfnp")
+theme_override_font_sizes/font_size = 20
+
+[node name="Label" type="Label" parent="BUTTONS/Play" unique_id=286821851]
+layout_mode = 0
+offset_left = 10.58446
+offset_top = 22.023722
+offset_right = 65.58446
+offset_bottom = 48.02372
+theme_override_fonts/font = ExtResource("3_opfnp")
+theme_override_font_sizes/font_size = 23
 text = "PLAY"
 
 [node name="Options" type="Button" parent="BUTTONS" unique_id=699961003]
@@ -96,8 +104,18 @@ offset_left = 331.26566
 offset_top = 234.9252
 offset_right = 401.5902
 offset_bottom = 304.0569
-theme_override_fonts/font = ExtResource("3_1ehe0")
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("3_opfnp")
+theme_override_font_sizes/font_size = 16
+
+[node name="Label" type="Label" parent="BUTTONS/Options" unique_id=887944153]
+layout_mode = 0
+offset_left = 7.4111576
+offset_top = 22.02372
+offset_right = 78.411156
+offset_bottom = 45.02372
+scale = Vector2(0.8652297, 1.0326291)
+theme_override_fonts/font = ExtResource("3_opfnp")
+theme_override_font_sizes/font_size = 20
 text = "OPTION"
 
 [node name="Exit" type="Button" parent="BUTTONS" unique_id=1046107466]
@@ -105,8 +123,17 @@ offset_left = 436.75247
 offset_top = 234.92522
 offset_right = 508.3108
 offset_bottom = 303.44507
-theme_override_fonts/font = ExtResource("3_1ehe0")
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("3_opfnp")
+theme_override_font_sizes/font_size = 20
+
+[node name="Label" type="Label" parent="BUTTONS/Exit" unique_id=1182179916]
+layout_mode = 0
+offset_left = 9.921998
+offset_top = 20.977068
+offset_right = 64.922
+offset_bottom = 46.977066
+theme_override_fonts/font = ExtResource("3_opfnp")
+theme_override_font_sizes/font_size = 25
 text = "EXIT"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1928557935]

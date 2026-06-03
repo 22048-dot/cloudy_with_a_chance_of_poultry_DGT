@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://dlxfp4x676e2q"]
+
+[ext_resource type="Texture2D" uid="uid://cbxeje6tilcg0" path="res://Art/death_screen.png" id="1_8hps1"]
+[ext_resource type="Script" uid="uid://bcv1etucc55sc" path="res://Scripts/death_screen.gd" id="1_tseak"]
+[ext_resource type="Texture2D" uid="uid://lm165k8sn5m8" path="res://Art/sad_chicken.png" id="2_rwas2"]
+[ext_resource type="FontFile" uid="uid://csf5oap6e87gs" path="res://Art/PixelPurl.ttf" id="4_amiou"]
+[ext_resource type="Texture2D" uid="uid://djif2jh1cfmfn" path="res://Art/panel.png" id="5_tpvs2"]
+[ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="5_vb6s7"]
+
+[sub_resource type="Animation" id="Animation_tseak"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SadChicken:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_amiou"]
+resource_name = "sad chicken"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SadChicken:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vb6s7"]
+_data = {
+&"RESET": SubResource("Animation_tseak"),
+&"sad chicken": SubResource("Animation_amiou")
+}
+
+[node name="Death_screen" type="Node2D" unique_id=1272138152]
+script = ExtResource("1_tseak")
+
+[node name="DeathScreen" type="Sprite2D" parent="." unique_id=598489167]
+position = Vector2(864, 479.00003)
+scale = Vector2(9.803977, 9.544643)
+texture = ExtResource("1_8hps1")
+
+[node name="SadChicken" type="Sprite2D" parent="." unique_id=1677582664]
+position = Vector2(887, 672)
+scale = Vector2(8.572108, 7.872648)
+texture = ExtResource("2_rwas2")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1995321115]
+libraries/ = SubResource("AnimationLibrary_vb6s7")
+
+[node name="GAME_OVER" type="Label" parent="." unique_id=880117916]
+offset_left = 315.0
+offset_top = 154.0
+offset_right = 1544.0
+offset_bottom = 411.0
+theme_override_colors/font_color = Color(2.8878452e-07, 0.24302685, 0.55585736, 1)
+theme_override_fonts/font = ExtResource("4_amiou")
+theme_override_font_sizes/font_size = 270
+text = "GAME OVER"
+
+[node name="Label" type="Label" parent="GAME_OVER" unique_id=1121943482]
+layout_mode = 0
+offset_left = 21.0
+offset_top = -2.0
+offset_right = 1250.0
+offset_bottom = 255.0
+theme_override_colors/font_color = Color(0.59002244, 0.72159964, 1, 1)
+theme_override_fonts/font = ExtResource("4_amiou")
+theme_override_font_sizes/font_size = 270
+text = "GAME OVER"
+
+[node name="Panel" type="Sprite2D" parent="." unique_id=1861733974]
+position = Vector2(402.50003, 651.25)
+scale = Vector2(5.5468755, 2.1171873)
+texture = ExtResource("5_tpvs2")
+
+[node name="back_to_menu" type="Button" parent="." unique_id=506301024]
+offset_left = 228.00002
+offset_top = 585.00006
+offset_right = 261.60938
+offset_bottom = 615.4069
+scale = Vector2(10.443523, 4.374007)
+flat = true
+
+[node name="Back_to_menu" type="Label" parent="." unique_id=1440390847]
+offset_left = 250.0
+offset_top = 627.0
+offset_right = 555.0
+offset_bottom = 678.0
+theme_override_fonts/font = ExtResource("5_vb6s7")
+theme_override_font_sizes/font_size = 50
+text = "Back  to   menu"
+
+[connection signal="pressed" from="back_to_menu" to="." method="_on_back_to_menu_pressed"]

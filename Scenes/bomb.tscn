@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://worle0lv87wu"]
+
+[ext_resource type="Script" uid="uid://coc7rmw8hbg3r" path="res://Scripts/bomb.gd" id="1_kdyat"]
+[ext_resource type="Texture2D" uid="uid://8j4xjphsx4yw" path="res://Art/bomb.png" id="2_kdyat"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fn8o"]
+size = Vector2(25.536633, 27.280968)
+
+[node name="Bomb" type="Area2D" unique_id=942676186]
+script = ExtResource("1_kdyat")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1689532002]
+scale = Vector2(6.1822658, 6.0055976)
+texture = ExtResource("2_kdyat")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1418637404]
+position = Vector2(-0.99999934, 14.000004)
+rotation = -3.1415925
+scale = Vector2(9.711538, 9.457143)
+shape = SubResource("RectangleShape2D_4fn8o")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

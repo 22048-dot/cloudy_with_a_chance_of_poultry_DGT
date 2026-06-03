@@ -9,11 +9,12 @@ func die():
 	get_tree().reload_current_scene()
 
 var last_direction = Vector2.ZERO
+var score = 0
 
-const SPEED = 700
-const FRICTION = 2000
-const JUMP_VELOCITY = -1000
-const GRAVITY = 1500
+const SPEED = 1000
+const FRICTION = 20000
+const JUMP_VELOCITY = -2500
+const GRAVITY = 4000
 
 func _ready():
 	animation_player.play("running")

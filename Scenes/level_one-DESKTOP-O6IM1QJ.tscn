@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cot3q6b5fv61x" path="res://Art/blue_panel.png" id="2_gni6d"]
 [ext_resource type="Texture2D" uid="uid://bi4fem5spiw2i" path="res://Art/background_ext_clouds.png" id="4_gni6d"]
 [ext_resource type="Texture2D" uid="uid://bk3a5asxa7ytj" path="res://Art/grass platform tilemap.png" id="5_b7vm3"]
-[ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="7_3lrk7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gni6d"]
 texture = ExtResource("5_b7vm3")
@@ -155,19 +154,11 @@ texture = ExtResource("5_b7vm3")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ys0qe")
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3lrk7"]
-polygon = PackedVector2Array(430, 1905, -124, 1898, -211, 1976, -216, 2162, -192, 2273, 3692, 2272, 3739, 2238, 3745, 2031, 3664, 1940, 3623, 1899)
-
-[sub_resource type="Gradient" id="Gradient_3lrk7"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_y3aq0"]
-gradient = SubResource("Gradient_3lrk7")
-
 [node name="Level_one" type="Node2D" unique_id=985401646]
 script = ExtResource("1_gni6d")
 
 [node name="Panel" type="Sprite2D" parent="." unique_id=501550828]
-position = Vector2(90408, -22874)
+position = Vector2(90542.01, -22259.998)
 scale = Vector2(1106.8345, 1081.8738)
 texture = ExtResource("2_b7vm3")
 
@@ -192,14 +183,9 @@ scale = Vector2(6.949384, 7.875788)
 tile_map_data = PackedByteArray("AAALAEsAAAABAAEAAAALAEwAAAABAAIAAAALAE0AAAABAAMAAAAMAEoAAAACAAAAAAAMAEsAAAACAAEAAAAMAEwAAAACAAIAAAAMAE0AAAACAAMAAAANAEoAAAADAAAAAAANAEsAAAADAAEAAAANAEwAAAADAAIAAAANAE0AAAADAAMAAAAOAEsAAAAEAAEAAAAOAEwAAAAEAAIAAAAOAE0AAAAEAAMAAAAPAEoAAAAFAAAAAAAPAEsAAAAFAAEAAAAPAEwAAAAFAAIAAAAPAE0AAAAFAAMAAAAQAEoAAAAGAAAAAAAQAEsAAAAGAAEAAAAQAEwAAAAGAAIAAAAQAE0AAAAGAAMAAAARAEsAAAAHAAEAAAARAEwAAAAHAAIAAAARAE0AAAAHAAMAAAASAEsAAAAEAAEAAAASAEwAAAAEAAIAAAASAE0AAAAEAAMAAAATAEoAAAAFAAAAAAATAEsAAAAFAAEAAAATAEwAAAAFAAIAAAATAE0AAAAFAAMAAAAUAEoAAAAGAAAAAAAUAEsAAAAGAAEAAAAUAEwAAAAGAAIAAAAUAE0AAAAGAAMAAAAVAEsAAAAHAAEAAAAVAEwAAAAHAAIAAAAVAE0AAAAHAAMAAAAWAEsAAAAEAAEAAAAWAEwAAAAEAAIAAAAWAE0AAAAEAAMAAAAXAEoAAAAFAAAAAAAXAEsAAAAFAAEAAAAXAEwAAAAFAAIAAAAXAE0AAAAFAAMAAAAYAEoAAAAGAAAAAAAYAEsAAAAGAAEAAAAYAEwAAAAGAAIAAAAYAE0AAAAGAAMAAAAZAEsAAAAHAAEAAAAZAEwAAAAHAAIAAAAZAE0AAAAHAAMAAAAaAEsAAAAEAAEAAAAaAEwAAAAEAAIAAAAaAE0AAAAEAAMAAAAbAEoAAAAFAAAAAAAbAEsAAAAFAAEAAAAbAEwAAAAFAAIAAAAbAE0AAAAFAAMAAAAcAEoAAAAGAAAAAAAcAEsAAAAGAAEAAAAcAEwAAAAGAAIAAAAcAE0AAAAGAAMAAAAdAEsAAAAHAAEAAAAdAEwAAAAHAAIAAAAdAE0AAAAHAAMAAAAeAEsAAAAEAAEAAAAeAEwAAAAEAAIAAAAeAE0AAAAEAAMAAAAfAEoAAAAFAAAAAAAfAEsAAAAFAAEAAAAfAEwAAAAFAAIAAAAfAE0AAAAFAAMAAAAgAEoAAAAGAAAAAAAgAEsAAAAGAAEAAAAgAEwAAAAGAAIAAAAgAE0AAAAGAAMAAAAhAEsAAAAHAAEAAAAhAEwAAAAHAAIAAAAhAE0AAAAHAAMAAAAiAEsAAAAEAAEAAAAiAEwAAAAEAAIAAAAiAE0AAAAEAAMAAAAjAEoAAAAFAAAAAAAjAEsAAAAFAAEAAAAjAEwAAAAFAAIAAAAjAE0AAAAFAAMAAAAkAEoAAAAGAAAAAAAkAEsAAAAGAAEAAAAkAEwAAAAGAAIAAAAkAE0AAAAGAAMAAAAlAEsAAAAHAAEAAAAlAEwAAAAHAAIAAAAlAE0AAAAHAAMAAAAmAEsAAAAEAAEAAAAmAEwAAAAEAAIAAAAmAE0AAAAEAAMAAAAnAEoAAAAFAAAAAAAnAEsAAAAFAAEAAAAnAEwAAAAFAAIAAAAnAE0AAAAFAAMAAAAoAEoAAAAGAAAAAAAoAEsAAAAGAAEAAAAoAEwAAAAGAAIAAAAoAE0AAAAGAAMAAAApAEsAAAAHAAEAAAApAEwAAAAHAAIAAAApAE0AAAAHAAMAAAAqAEsAAAAEAAEAAAAqAEwAAAAEAAIAAAAqAE0AAAAEAAMAAAArAEoAAAAFAAAAAAArAEsAAAAFAAEAAAArAEwAAAAFAAIAAAArAE0AAAAFAAMAAAAsAEoAAAAIAAAAAAAsAEsAAAAIAAEAAAAsAEwAAAAIAAIAAAAsAE0AAAAIAAMAAAAtAEsAAAAJAAEAAAAtAEwAAAAJAAIAAAAtAE0AAAAJAAMAAAAtAEoAAAAJAAAAAAAuAEsAAAAKAAEAAAAuAEwAAAAKAAIAAAAuAE0AAAAKAAMAAAA=")
 tile_set = SubResource("TileSet_ep8vc")
 
-[node name="background_ext_clouds" type="Sprite2D" parent="." unique_id=1981184706]
+[node name="BackgroundExtClouds" type="Sprite2D" parent="." unique_id=1981184706]
 position = Vector2(1801.5, 1129.25)
 scale = Vector2(41.721222, 37.883526)
-texture = ExtResource("4_gni6d")
-
-[node name="background_ext_clouds_2" type="Sprite2D" parent="." unique_id=1436461270]
-position = Vector2(1830, 1053)
-scale = Vector2(53.84506, 57.291622)
 texture = ExtResource("4_gni6d")
 
 [node name="Timer" type="Timer" parent="." unique_id=1423531204]
@@ -208,65 +194,19 @@ autostart = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=489396633]
 
 [node name="Score_label" type="Label" parent="CanvasLayer" unique_id=1135267042]
-offset_left = 13.0
-offset_right = 65.0
+offset_right = 40.0
 offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("7_3lrk7")
-theme_override_font_sizes/font_size = 50
-text = "Score: 0"
 
 [node name="Hiscore_label" type="Label" parent="CanvasLayer" unique_id=1279188766]
-offset_left = 293.0
-offset_top = -1.0
-offset_right = 558.0
-offset_bottom = 66.0
-theme_override_fonts/font = ExtResource("7_3lrk7")
-theme_override_font_sizes/font_size = 50
-text = "Highscore: 0"
+offset_left = 119.0
+offset_top = 1.0
+offset_right = 159.0
+offset_bottom = 24.0
 
 [node name="Lives label" type="Label" parent="CanvasLayer" unique_id=496860627]
-offset_left = 708.0
-offset_top = 2.0
-offset_right = 891.0
-offset_bottom = 69.0
-theme_override_fonts/font = ExtResource("7_3lrk7")
-theme_override_font_sizes/font_size = 50
-text = "Lives: 3"
-
-[node name="floor" type="LightOccluder2D" parent="." unique_id=534678576]
-occluder = SubResource("OccluderPolygon2D_3lrk7")
-
-[node name="platform 1" type="LightOccluder2D" parent="." unique_id=1225309425]
-position = Vector2(-15, 451)
-scale = Vector2(0.11740353, 0.35595056)
-occluder = SubResource("OccluderPolygon2D_3lrk7")
-
-[node name="platform 2" type="LightOccluder2D" parent="." unique_id=2033140135]
-position = Vector2(1551, 343)
-scale = Vector2(0.11353417, 0.40313315)
-occluder = SubResource("OccluderPolygon2D_3lrk7")
-
-[node name="platform 3" type="LightOccluder2D" parent="." unique_id=1700123512]
-position = Vector2(3160, 318.00012)
-scale = Vector2(0.11290986, 0.415474)
-occluder = SubResource("OccluderPolygon2D_3lrk7")
-
-[node name="platform 4" type="LightOccluder2D" parent="." unique_id=790556103]
-position = Vector2(2409.0002, 843)
-scale = Vector2(0.11286077, 0.42484555)
-occluder = SubResource("OccluderPolygon2D_3lrk7")
-
-[node name="platform 5" type="LightOccluder2D" parent="." unique_id=1860090142]
-position = Vector2(752, 880)
-scale = Vector2(0.11269257, 0.407082)
-occluder = SubResource("OccluderPolygon2D_3lrk7")
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=693804463]
-position = Vector2(-1192, 33.99991)
-rotation = -5.185857
-scale = Vector2(-225.45584, 269.3787)
-color = Color(1, 1, 1, 0.26666668)
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_y3aq0")
+offset_left = 237.0
+offset_top = 1.0
+offset_right = 277.0
+offset_bottom = 24.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

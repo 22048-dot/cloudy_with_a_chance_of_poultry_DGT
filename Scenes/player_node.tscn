@@ -52,17 +52,20 @@ _data = {
 script = ExtResource("1_dm0xv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=192979206]
-scale = Vector2(2.0775154, 2.0357163)
+scale = Vector2(4.029251, 3.7335558)
 texture = ExtResource("2_nbi4f")
 hframes = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2054203168]
 position = Vector2(-9.999999, 7.499999)
-scale = Vector2(0.97929746, 1.6611915)
+scale = Vector2(1.9631808, 3.1834981)
 shape = SubResource("RectangleShape2D_loxhc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1324976466]
-zoom = Vector2(0.5, 0.5)
+position = Vector2(0, -166)
+zoom = Vector2(0.3, 0.3)
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1767653174]
 libraries/ = SubResource("AnimationLibrary_a8sby")
