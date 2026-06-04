@@ -69,5 +69,3 @@ position_smoothing_speed = 4.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1767653174]
 libraries/ = SubResource("AnimationLibrary_a8sby")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=153309566]

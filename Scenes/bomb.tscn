@@ -1,13 +1,28 @@
 [gd_scene format=3 uid="uid://worle0lv87wu"]
 
 [ext_resource type="Script" uid="uid://coc7rmw8hbg3r" path="res://Scripts/bomb.gd" id="1_kdyat"]
+[ext_resource type="Shader" uid="uid://dyuupmetmov76" path="res://Scenes/bomb_evil_aura.gdshader" id="2_2fiif"]
 [ext_resource type="Texture2D" uid="uid://8j4xjphsx4yw" path="res://Art/bomb.png" id="2_kdyat"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60xmw"]
+shader = ExtResource("2_2fiif")
+shader_parameter/speed = 0.3
+shader_parameter/glow_strength = 0.558000026505
+shader_parameter/edge_softness = 0.2270000107825
+shader_parameter/color = Color(0.98039216, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fn8o"]
 size = Vector2(25.536633, 27.280968)
 
 [node name="Bomb" type="Area2D" unique_id=942676186]
 script = ExtResource("1_kdyat")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1029869716]
+material = SubResource("ShaderMaterial_60xmw")
+offset_left = -228.0
+offset_top = -229.0
+offset_right = 229.0
+offset_bottom = 242.0
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1689532002]
 scale = Vector2(6.1822658, 6.0055976)

@@ -7,9 +7,9 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7piv4"]
 shader = ExtResource("1_1iuog")
 shader_parameter/speed = 0.3
-shader_parameter/glow_strength = 0.822000039045
+shader_parameter/glow_strength = 0.40400001919
 shader_parameter/edge_softness = 0.17200000817
-shader_parameter/color = Color(0.9396779, 0.94163066, 0.7562064, 1)
+shader_parameter/color = Color(0.9473404, 0.960427, 0.49585062, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1iuog"]
 
