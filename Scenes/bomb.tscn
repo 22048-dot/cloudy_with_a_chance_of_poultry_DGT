@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://worle0lv87wu"]
 
 [ext_resource type="Script" uid="uid://coc7rmw8hbg3r" path="res://Scripts/bomb.gd" id="1_kdyat"]
-[ext_resource type="Shader" uid="uid://dyuupmetmov76" path="res://Scenes/bomb_evil_aura.gdshader" id="2_2fiif"]
+[ext_resource type="Shader" uid="uid://dyuupmetmov76" path="res://Shaders/bomb_evil_aura.gdshader" id="2_2fiif"]
 [ext_resource type="Texture2D" uid="uid://8j4xjphsx4yw" path="res://Art/bomb.png" id="2_kdyat"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_60xmw"]
