@@ -73,8 +73,37 @@ text = "cloudy with a chance of
 POULTRY"
 horizontal_alignment = 1
 
+[node name="play_label" type="Label" parent="." unique_id=286821851]
+offset_left = 340.51886
+offset_top = 298.55078
+offset_right = 450.51886
+offset_bottom = 349.55078
+scale = Vector2(0.46906382, 0.52328086)
+theme_override_fonts/font = ExtResource("3_opfnp")
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="options_label" type="Label" parent="." unique_id=887944153]
+offset_left = 474.38226
+offset_top = 299.77435
+offset_right = 639.3823
+offset_bottom = 350.77435
+scale = Vector2(0.34163243, 0.4416347)
+theme_override_fonts/font = ExtResource("3_opfnp")
+theme_override_font_sizes/font_size = 50
+text = "OPTION"
+
+[node name="exit-label" type="Label" parent="." unique_id=1182179916]
+offset_left = 613.79755
+offset_top = 297.3272
+offset_right = 745.79755
+offset_bottom = 358.3272
+scale = Vector2(0.4249562, 0.4945238)
+theme_override_fonts/font = ExtResource("3_opfnp")
+theme_override_font_sizes/font_size = 60
+text = "EXIT"
+
 [node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("6_opfnp")]
-visible = false
 
 [node name="BUTTONS" type="Node2D" parent="." unique_id=1032241151]
 position = Vector2(25.29216, -1.8353537)
@@ -88,16 +117,7 @@ offset_right = 296.72025
 offset_bottom = 304.66864
 theme_override_fonts/font = ExtResource("3_opfnp")
 theme_override_font_sizes/font_size = 20
-
-[node name="Label" type="Label" parent="BUTTONS/Play" unique_id=286821851]
-layout_mode = 0
-offset_left = 10.58446
-offset_top = 22.023722
-offset_right = 65.58446
-offset_bottom = 48.02372
-theme_override_fonts/font = ExtResource("3_opfnp")
-theme_override_font_sizes/font_size = 23
-text = "PLAY"
+flat = true
 
 [node name="Options" type="Button" parent="BUTTONS" unique_id=699961003]
 offset_left = 331.26566
@@ -106,17 +126,7 @@ offset_right = 401.5902
 offset_bottom = 304.0569
 theme_override_fonts/font = ExtResource("3_opfnp")
 theme_override_font_sizes/font_size = 16
-
-[node name="Label" type="Label" parent="BUTTONS/Options" unique_id=887944153]
-layout_mode = 0
-offset_left = 7.4111576
-offset_top = 22.02372
-offset_right = 78.411156
-offset_bottom = 45.02372
-scale = Vector2(0.8652297, 1.0326291)
-theme_override_fonts/font = ExtResource("3_opfnp")
-theme_override_font_sizes/font_size = 20
-text = "OPTION"
+flat = true
 
 [node name="Exit" type="Button" parent="BUTTONS" unique_id=1046107466]
 offset_left = 436.75247
@@ -125,16 +135,7 @@ offset_right = 508.3108
 offset_bottom = 303.44507
 theme_override_fonts/font = ExtResource("3_opfnp")
 theme_override_font_sizes/font_size = 20
-
-[node name="Label" type="Label" parent="BUTTONS/Exit" unique_id=1182179916]
-layout_mode = 0
-offset_left = 9.921998
-offset_top = 20.977068
-offset_right = 64.922
-offset_bottom = 46.977066
-theme_override_fonts/font = ExtResource("3_opfnp")
-theme_override_font_sizes/font_size = 25
-text = "EXIT"
+flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1928557935]
 position = Vector2(25.292158, -1.8353536)

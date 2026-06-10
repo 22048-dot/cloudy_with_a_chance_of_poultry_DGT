@@ -1,10 +1,12 @@
 extends Node2D
 
 @onready var tut_play = $AnimationPlayer
+@onready var SceneTransitionAnimation: AnimationPlayer = $"../SceneTransitionAnimation/AnimationPlayer"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	tut_play.play("show_tut")
+	SceneTransitionAnimation.play("fade_in")
 
 
 func _on_back_pressed() -> void:
