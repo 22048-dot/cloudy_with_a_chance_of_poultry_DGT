@@ -2,13 +2,14 @@ extends Node2D
 
 @onready var egg_scene = preload("res://Scenes/egg.tscn")
 @onready var bomb_scene = preload("res://Scenes/bomb.tscn")
-@onready var SceneTransitionAnimation: AnimationPlayer = $"../SceneTransitionAnimation/AnimationPlayer"
+@onready var SceneTransitionAnimation: AnimationPlayer = $SceneTransitionAnimation/AnimationPlayer
+@onready var death_ani: AnimationPlayer = $Player_node/AnimationPlayer
 
 var score = 0
 var lives = 3
 var highscore = score
 
-func _ready():
+func _ready() -> void:
 	SceneTransitionAnimation.play("fade_in")
 
 func _on_timer_timeout() -> void:
@@ -45,6 +46,7 @@ func lose_life():
 
 func game_over():
 	print("GAME OVER")
+	death_ani.play("death")
+	await get_tree().create_timer(1.5).timeout
 	SceneTransitionAnimation.play("fade_out")
-	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")

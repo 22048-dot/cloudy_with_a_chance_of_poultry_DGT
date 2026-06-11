@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="5_p8jf4"]
 [ext_resource type="Texture2D" uid="uid://bj6jsft2j8vyx" path="res://Art/button_icon.png" id="6_ys4pu"]
 [ext_resource type="FontFile" uid="uid://csf5oap6e87gs" path="res://Art/PixelPurl.ttf" id="7_h2ono"]
+[ext_resource type="PackedScene" uid="uid://sf1faejkf50x" path="res://Scenes/scene_transition_animation.tscn" id="8_h2ono"]
 
 [sub_resource type="Animation" id="Animation_p8jf4"]
 length = 0.001
@@ -91,14 +92,6 @@ position = Vector2(736, 837.3653)
 scale = Vector2(2.3125005, 2.0739157)
 texture = ExtResource("6_ys4pu")
 
-[node name="Back" type="Button" parent="." unique_id=2062692207]
-offset_left = 677.0
-offset_top = 806.0
-offset_right = 688.00604
-offset_bottom = 817.3832
-scale = Vector2(10.648635, 4.831708)
-flat = true
-
 [node name="back_label" type="Label" parent="." unique_id=1512649520]
 offset_left = 693.0
 offset_top = 814.0
@@ -114,14 +107,6 @@ position = Vector2(968.99994, 839.00006)
 scale = Vector2(2.3281243, 2.0390637)
 texture = ExtResource("6_ys4pu")
 
-[node name="Start" type="Button" parent="." unique_id=1716565404]
-offset_left = 907.0
-offset_top = 806.99994
-offset_right = 919.02026
-offset_bottom = 818.1761
-scale = Vector2(10.648635, 4.831708)
-flat = true
-
 [node name="skip_label" type="Label" parent="." unique_id=972772230]
 offset_left = 923.0
 offset_top = 814.99994
@@ -134,6 +119,24 @@ text = "START"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1117765348]
 position = Vector2(875, 493)
+
+[node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("8_h2ono")]
+
+[node name="Back" type="Button" parent="." unique_id=2062692207]
+offset_left = 677.0
+offset_top = 806.0
+offset_right = 688.00604
+offset_bottom = 817.3832
+scale = Vector2(10.648635, 4.831708)
+flat = true
+
+[node name="Start" type="Button" parent="." unique_id=1716565404]
+offset_left = 907.0
+offset_top = 806.99994
+offset_right = 919.02026
+offset_bottom = 818.1761
+scale = Vector2(10.648635, 4.831708)
+flat = true
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_skip_pressed"]

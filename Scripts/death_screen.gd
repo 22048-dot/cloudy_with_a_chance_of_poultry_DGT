@@ -1,13 +1,12 @@
 extends Node2D
 
 @onready var death_ani = $AnimationPlayer
-@onready var SceneTransitionAnimation: AnimationPlayer = $"../SceneTransitionAnimation/AnimationPlayer"
+@onready var SceneTransitionAnimation: AnimationPlayer = $SceneTransitionAnimation/AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	death_ani.play("sad chicken")
 	SceneTransitionAnimation.play("fade_in")
-
 
 func _on_back_to_menu_pressed() -> void:
 	SceneTransitionAnimation.play("fade_out")

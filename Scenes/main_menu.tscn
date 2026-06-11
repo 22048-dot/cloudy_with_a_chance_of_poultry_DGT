@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bh2t82wpa6lff" path="res://Art/MAIN_MENU.png" id="2_48xlc"]
 [ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="3_opfnp"]
 [ext_resource type="AudioStream" uid="uid://c3a8ngyk34iyi" path="res://Sounds_design/jumpingbunny-acoustic-like-country-382752.mp3" id="4_ce3w2"]
-[ext_resource type="PackedScene" path="res://Scenes/scene_transition_animation.tscn" id="6_opfnp"]
+[ext_resource type="PackedScene" uid="uid://sf1faejkf50x" path="res://Scenes/scene_transition_animation.tscn" id="6_opfnp"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_n45e2"]
 polygon = PackedVector2Array(145.4179, 273.17175, 226.88982, 196.7674, 361.88687, 135.53925, 378.93915, 135.01593, 509.67313, 198.86067, 587.8293, 275.78836, 587.8293, 282.06818, 574.5664, 283.1148, 561.7772, 275.78836, 561.7772, 387.77832, 755.5099, 386.7317, 783.9303, 450.0531, -36.946564, 476.7423, -34.10452, 364.75235, -29.367779, 380.9752, -17.999605, 390.9182, 29.841457, 390.3949, 27.473091, 158.0419, 35.525547, 156.47195, 35.051872, 149.14551, 44.051678, 149.14551, 45.94637, 156.47195, 53.05148, 155.94862, 50.68311, 388.30164, 68.682724, 388.82495, 68.209045, 389.34827, 72.47211, 389.34827, 71.524765, 152.2854, 60.63026, 149.66882, 61.10394, 127.68949, 68.682724, 126.64285, 68.682724, 103.09357, 111.31337, 76.404366, 159.62811, 76.404366, 197.9957, 103.09357, 197.9957, 124.54958, 208.41653, 127.68949, 208.41653, 150.71545, 199.41672, 149.66882, 199.8904, 219.27005)

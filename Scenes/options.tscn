@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://bbgqj13yljrs8" path="res://Scripts/options.gd" id="1_kftxf"]
 [ext_resource type="Texture2D" uid="uid://bh2t82wpa6lff" path="res://Art/MAIN_MENU.png" id="1_prnvy"]
 [ext_resource type="AudioStream" uid="uid://c3a8ngyk34iyi" path="res://Sounds_design/jumpingbunny-acoustic-like-country-382752.mp3" id="2_qyyw6"]
-[ext_resource type="FontFile" uid="uid://b5lb6ioee40w2" path="res://Art/DemoslmoofarmRegular-zr8xD.otf" id="3_ww8vx"]
 [ext_resource type="FontFile" uid="uid://d1dbv4fo76ug1" path="res://Art/Bull Ride.ttf" id="5_663nc"]
+[ext_resource type="PackedScene" uid="uid://sf1faejkf50x" path="res://Scenes/scene_transition_animation.tscn" id="6_663nc"]
+[ext_resource type="FontFile" uid="uid://csf5oap6e87gs" path="res://Art/PixelPurl.ttf" id="6_hvj8k"]
 
 [node name="options" type="Node2D" unique_id=1245243883]
 script = ExtResource("1_kftxf")
@@ -42,19 +43,20 @@ offset_left = 672.0
 offset_top = 108.0
 offset_right = 979.0
 offset_bottom = 208.0
-theme_override_fonts/font = ExtResource("3_ww8vx")
+theme_override_fonts/font = ExtResource("6_hvj8k")
 theme_override_font_sizes/font_size = 100
 text = "OPTIONS"
 
-[node name="back to menu" type="Button" parent="." unique_id=1620705333]
-offset_left = 696.0
-offset_top = 613.0
-offset_right = 947.0
-offset_bottom = 757.0
-theme_override_fonts/font = ExtResource("5_663nc")
-theme_override_font_sizes/font_size = 50
+[node name="Label2" type="Label" parent="." unique_id=103202268]
+offset_left = 729.0
+offset_top = 558.0
+offset_right = 892.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("6_hvj8k")
+theme_override_font_sizes/font_size = 100
 text = "Back"
-flat = true
+
+[node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("6_663nc")]
 
 [node name="brightness" type="HSlider" parent="." unique_id=1031463233]
 offset_left = 391.0
@@ -91,6 +93,15 @@ offset_bottom = 18.0
 theme_override_fonts/font = ExtResource("5_663nc")
 text = "Volume"
 
-[connection signal="pressed" from="back to menu" to="." method="_on_back_to_menu_pressed"]
+[node name="back to menu" type="Button" parent="." unique_id=1620705333]
+offset_left = 688.0
+offset_top = 528.0
+offset_right = 939.0
+offset_bottom = 672.0
+theme_override_fonts/font = ExtResource("5_663nc")
+theme_override_font_sizes/font_size = 50
+flat = true
+
 [connection signal="value_changed" from="brightness" to="." method="_on_brightness_value_changed"]
 [connection signal="value_changed" from="volume" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="back to menu" to="." method="_on_back_to_menu_pressed"]

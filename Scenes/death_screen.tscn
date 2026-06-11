@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://csf5oap6e87gs" path="res://Art/PixelPurl.ttf" id="4_amiou"]
 [ext_resource type="Texture2D" uid="uid://djif2jh1cfmfn" path="res://Art/panel.png" id="5_tpvs2"]
 [ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="5_vb6s7"]
+[ext_resource type="PackedScene" uid="uid://sf1faejkf50x" path="res://Scenes/scene_transition_animation.tscn" id="7_l3qio"]
 
 [sub_resource type="Animation" id="Animation_tseak"]
 length = 0.001
@@ -87,14 +88,6 @@ position = Vector2(402.50003, 651.25)
 scale = Vector2(5.5468755, 2.1171873)
 texture = ExtResource("5_tpvs2")
 
-[node name="back_to_menu" type="Button" parent="." unique_id=506301024]
-offset_left = 228.00002
-offset_top = 585.00006
-offset_right = 261.60938
-offset_bottom = 615.4069
-scale = Vector2(10.443523, 4.374007)
-flat = true
-
 [node name="Back_to_menu" type="Label" parent="." unique_id=1440390847]
 offset_left = 250.0
 offset_top = 627.0
@@ -103,5 +96,15 @@ offset_bottom = 678.0
 theme_override_fonts/font = ExtResource("5_vb6s7")
 theme_override_font_sizes/font_size = 50
 text = "Back  to   menu"
+
+[node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("7_l3qio")]
+
+[node name="back_to_menu" type="Button" parent="." unique_id=506301024]
+offset_left = 228.00002
+offset_top = 585.00006
+offset_right = 261.60938
+offset_bottom = 615.4069
+scale = Vector2(10.443523, 4.374007)
+flat = true
 
 [connection signal="pressed" from="back_to_menu" to="." method="_on_back_to_menu_pressed"]

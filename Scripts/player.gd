@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var animation_player = $AnimationPlayer
-@onready var sprite = $Sprite2D
+@onready var sprite = $ChickenSprite
 @onready var all_interactions = []
 @export var fall_limit: float = 2500
 
@@ -17,7 +17,7 @@ const JUMP_VELOCITY = -2500
 const GRAVITY = 4000
 
 func _ready():
-	animation_player.play("running")
+	animation_player.play("idle")
 	up_direction = Vector2.UP
 	floor_stop_on_slope = true
 	floor_max_angle = deg_to_rad(45)
@@ -30,9 +30,11 @@ func _physics_process(delta):
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	
 	if Input.is_action_pressed("A"):
+		animation_player.play("running")
 		direction.x -= 1
 	
 	if Input.is_action_pressed("D"):
+		animation_player.play("running")
 		direction.x += 1
 
 	# Apply gravity
@@ -42,6 +44,7 @@ func _physics_process(delta):
 		# Jump input
 		if Input.is_action_just_pressed("ui_accept"):
 			velocity.y = JUMP_VELOCITY
+			animation_player.play("jump")
 			
 	# Handle horizontal movement
 	if direction.x != 0:

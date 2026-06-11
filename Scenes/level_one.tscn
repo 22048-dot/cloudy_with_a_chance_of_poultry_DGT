@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bi4fem5spiw2i" path="res://Art/background_ext_clouds.png" id="4_gni6d"]
 [ext_resource type="Texture2D" uid="uid://bk3a5asxa7ytj" path="res://Art/grass platform tilemap.png" id="5_b7vm3"]
 [ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="7_3lrk7"]
+[ext_resource type="PackedScene" uid="uid://sf1faejkf50x" path="res://Scenes/scene_transition_animation.tscn" id="8_y3aq0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gni6d"]
 texture = ExtResource("5_b7vm3")
@@ -202,6 +203,11 @@ position = Vector2(1830, 1053)
 scale = Vector2(53.84506, 57.291622)
 texture = ExtResource("4_gni6d")
 
+[node name="background_ext_clouds_3" type="Sprite2D" parent="." unique_id=1746812214]
+position = Vector2(1784, 1082)
+scale = Vector2(49.806602, 52.57214)
+texture = ExtResource("4_gni6d")
+
 [node name="Timer" type="Timer" parent="." unique_id=1423531204]
 autostart = true
 
@@ -233,40 +239,49 @@ theme_override_fonts/font = ExtResource("7_3lrk7")
 theme_override_font_sizes/font_size = 50
 text = "Lives: 3"
 
-[node name="floor" type="LightOccluder2D" parent="." unique_id=534678576]
+[node name="light occluders and point lights" type="Node2D" parent="." unique_id=1691405333]
+
+[node name="floor" type="LightOccluder2D" parent="light occluders and point lights" unique_id=534678576]
 occluder = SubResource("OccluderPolygon2D_3lrk7")
 
-[node name="platform 1" type="LightOccluder2D" parent="." unique_id=1225309425]
+[node name="platform 1" type="LightOccluder2D" parent="light occluders and point lights" unique_id=1225309425]
 position = Vector2(-15, 451)
 scale = Vector2(0.11740353, 0.35595056)
 occluder = SubResource("OccluderPolygon2D_3lrk7")
 
-[node name="platform 2" type="LightOccluder2D" parent="." unique_id=2033140135]
+[node name="platform 2" type="LightOccluder2D" parent="light occluders and point lights" unique_id=2033140135]
 position = Vector2(1551, 343)
 scale = Vector2(0.11353417, 0.40313315)
 occluder = SubResource("OccluderPolygon2D_3lrk7")
 
-[node name="platform 3" type="LightOccluder2D" parent="." unique_id=1700123512]
+[node name="platform 3" type="LightOccluder2D" parent="light occluders and point lights" unique_id=1700123512]
 position = Vector2(3160, 318.00012)
 scale = Vector2(0.11290986, 0.415474)
 occluder = SubResource("OccluderPolygon2D_3lrk7")
 
-[node name="platform 4" type="LightOccluder2D" parent="." unique_id=790556103]
+[node name="platform 4" type="LightOccluder2D" parent="light occluders and point lights" unique_id=790556103]
 position = Vector2(2409.0002, 843)
 scale = Vector2(0.11286077, 0.42484555)
 occluder = SubResource("OccluderPolygon2D_3lrk7")
 
-[node name="platform 5" type="LightOccluder2D" parent="." unique_id=1860090142]
+[node name="platform 5" type="LightOccluder2D" parent="light occluders and point lights" unique_id=1860090142]
 position = Vector2(752, 880)
 scale = Vector2(0.11269257, 0.407082)
 occluder = SubResource("OccluderPolygon2D_3lrk7")
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=693804463]
+[node name="PointLight2D" type="PointLight2D" parent="light occluders and point lights" unique_id=693804463]
 position = Vector2(-1192, 33.99991)
-rotation = -5.185857
-scale = Vector2(-225.45584, 269.3787)
+rotation = -2.044264
+scale = Vector2(225.45586, -269.37872)
 color = Color(1, 1, 1, 0.26666668)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_y3aq0")
 
+[node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("8_y3aq0")]
+position = Vector2(-3204, -1047)
+scale = Vector2(5.7676105, 3.8034294)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="Player_node"]
+[editable path="SceneTransitionAnimation"]

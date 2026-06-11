@@ -4,8 +4,8 @@ extends Node2D
 @onready var SceneTransitionAnimation: AnimationPlayer = $"../SceneTransitionAnimation/AnimationPlayer"
 
 func _ready() -> void:
-	music_player.play()
 	SceneTransitionAnimation.play("fade_in")
+	music_player.play()
 
 func _on_play_pressed() -> void:
 	SceneTransitionAnimation.play("fade_out")
