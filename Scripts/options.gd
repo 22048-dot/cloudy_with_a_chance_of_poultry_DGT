@@ -14,3 +14,6 @@ func _on_volume_value_changed(value: float) -> void:
 
 func _on_brightness_value_changed(value: float) -> void:
 	Brightness.color = Color(value, value, value)
+
+func _on_controls_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/controls_screen.tscn")

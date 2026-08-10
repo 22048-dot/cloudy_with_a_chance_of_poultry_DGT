@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://crb3pfp0f3bb1"]
+
+[ext_resource type="Script" uid="uid://b77nwged0vufm" path="res://Scripts/controls_screen.gd" id="1_es2i3"]
+[ext_resource type="Texture2D" uid="uid://djif2jh1cfmfn" path="res://Art/panel.png" id="1_xbjqm"]
+[ext_resource type="Texture2D" uid="uid://diq6210ve6mh" path="res://Art/border.png" id="2_hepep"]
+[ext_resource type="Texture2D" uid="uid://bj6jsft2j8vyx" path="res://Art/button_icon.png" id="3_h8rug"]
+[ext_resource type="Texture2D" uid="uid://dg32q2lywm145" path="res://Art/controls_screen.png" id="4_o5fkp"]
+[ext_resource type="FontFile" uid="uid://csf5oap6e87gs" path="res://Art/PixelPurl.ttf" id="4_vd22l"]
+[ext_resource type="PackedScene" uid="uid://sf1faejkf50x" path="res://Scenes/scene_transition_animation.tscn" id="7_kjnrg"]
+
+[sub_resource type="Animation" id="Animation_lnstd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_es2i3"]
+resource_name = "controls"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.49, 1, 1.48, 1.99, 2.51, 3.01, 3.48, 4.01, 4.47, 5, 5.49),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(0, 0), Vector2i(1, 0), Vector2i(0, 0), Vector2i(2, 0), Vector2i(0, 0), Vector2i(2, 0), Vector2i(0, 0), Vector2i(3, 0), Vector2i(0, 0), Vector2i(3, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kjnrg"]
+_data = {
+&"RESET": SubResource("Animation_lnstd"),
+&"controls": SubResource("Animation_es2i3")
+}
+
+[node name="ControlsScreen" type="Node2D" unique_id=2010245627]
+script = ExtResource("1_es2i3")
+
+[node name="Panel" type="Sprite2D" parent="." unique_id=1458761249]
+position = Vector2(601.00006, 356.99997)
+scale = Vector2(57.31211, 37.661808)
+texture = ExtResource("1_xbjqm")
+
+[node name="button_panel3" type="Sprite2D" parent="." unique_id=747914358]
+position = Vector2(574.00006, 884)
+scale = Vector2(4.5292125, 4.684867)
+texture = ExtResource("3_h8rug")
+
+[node name="back_label" type="Label" parent="." unique_id=1586063880]
+offset_left = 500.0
+offset_top = 843.00006
+offset_right = 631.0
+offset_bottom = 908.00006
+scale = Vector2(1.1017116, 0.93468845)
+theme_override_fonts/font = ExtResource("4_vd22l")
+theme_override_font_sizes/font_size = 75
+text = "BACK"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=871486]
+root_node = NodePath("../ControlsScreen")
+libraries/ = SubResource("AnimationLibrary_kjnrg")
+
+[node name="ControlsScreen" type="Sprite2D" parent="." unique_id=889313189]
+position = Vector2(580.49994, 369.5)
+scale = Vector2(5.789772, 5.5267854)
+texture = ExtResource("4_o5fkp")
+hframes = 4
+
+[node name="Border" type="Sprite2D" parent="." unique_id=1774722973]
+position = Vector2(587.9999, 335.99997)
+scale = Vector2(7.3920836, 7.800451)
+texture = ExtResource("2_hepep")
+
+[node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("7_kjnrg")]
+visible = false
+position = Vector2(-134, -104)
+
+[node name="back" type="Button" parent="." unique_id=891382300]
+offset_left = 447.0
+offset_top = 801.00006
+offset_right = 455.0
+offset_bottom = 809.00006
+scale = Vector2(32.397038, 18.280651)
+flat = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1379226016]
+position = Vector2(591, 415)
+zoom = Vector2(0.8, 0.8)
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

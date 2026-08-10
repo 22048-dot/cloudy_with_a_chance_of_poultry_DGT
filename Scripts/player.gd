@@ -5,8 +5,8 @@ extends CharacterBody2D
 @onready var all_interactions = []
 @export var fall_limit: float = 2500
 
-func die():
-	get_tree().reload_current_scene()
+func fall():
+	self.global_position = Vector2(391, 1667)
 
 var last_direction = Vector2.ZERO
 var score = 0
@@ -25,7 +25,7 @@ func _ready():
 func _physics_process(delta):
 	if position.y > fall_limit:
 		await get_tree().create_timer(0.2).timeout
-		die()
+		fall()
 	var direction = Vector2.ZERO
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	

@@ -2,13 +2,20 @@
 
 [ext_resource type="Script" uid="uid://bbgqj13yljrs8" path="res://Scripts/options.gd" id="1_kftxf"]
 [ext_resource type="Texture2D" uid="uid://bh2t82wpa6lff" path="res://Art/MAIN_MENU.png" id="1_prnvy"]
+[ext_resource type="Texture2D" uid="uid://djif2jh1cfmfn" path="res://Art/panel.png" id="2_hvj8k"]
 [ext_resource type="AudioStream" uid="uid://c3a8ngyk34iyi" path="res://Sounds_design/jumpingbunny-acoustic-like-country-382752.mp3" id="2_qyyw6"]
+[ext_resource type="Texture2D" uid="uid://bj6jsft2j8vyx" path="res://Art/button_icon.png" id="5_38txh"]
 [ext_resource type="FontFile" uid="uid://d1dbv4fo76ug1" path="res://Art/Bull Ride.ttf" id="5_663nc"]
 [ext_resource type="PackedScene" uid="uid://sf1faejkf50x" path="res://Scenes/scene_transition_animation.tscn" id="6_663nc"]
 [ext_resource type="FontFile" uid="uid://csf5oap6e87gs" path="res://Art/PixelPurl.ttf" id="6_hvj8k"]
 
 [node name="options" type="Node2D" unique_id=1245243883]
 script = ExtResource("1_kftxf")
+
+[node name="Panel" type="Sprite2D" parent="." unique_id=1664011819]
+position = Vector2(-323, 107)
+scale = Vector2(154.42284, 124.0507)
+texture = ExtResource("2_hvj8k")
 
 [node name="visuals" type="Node2D" parent="." unique_id=1710042658]
 
@@ -25,10 +32,10 @@ offset_bottom = 896.0
 color = Color(0, 0, 0, 0.7490196)
 
 [node name="panel" type="ColorRect" parent="visuals" unique_id=1992418437]
-offset_left = 143.0
-offset_top = 60.0
-offset_right = 1478.0
-offset_bottom = 794.0
+offset_left = 141.0
+offset_top = 26.0
+offset_right = 1476.0
+offset_bottom = 760.0
 color = Color(0.01260527, 0.00058939017, 9.400537e-10, 0.8)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=986479668]
@@ -37,6 +44,26 @@ position = Vector2(794, 410)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1947566184]
 stream = ExtResource("2_qyyw6")
 autoplay = true
+
+[node name="ButtonIcon" type="Sprite2D" parent="." unique_id=492410193]
+position = Vector2(806, 615.00006)
+scale = Vector2(4.140625, 4.125)
+texture = ExtResource("5_38txh")
+
+[node name="ButtonIcon2" type="Sprite2D" parent="." unique_id=695514875]
+position = Vector2(1182.4082, 367.12497)
+scale = Vector2(5.1377573, 5.316406)
+texture = ExtResource("5_38txh")
+
+[node name="Label3" type="Label" parent="." unique_id=936133215]
+offset_left = 1078.0
+offset_top = 326.0
+offset_right = 1422.0
+offset_bottom = 426.0
+scale = Vector2(0.6118508, 0.6940859)
+theme_override_fonts/font = ExtResource("6_hvj8k")
+theme_override_font_sizes/font_size = 100
+text = "CONTROLS"
 
 [node name="Label" type="Label" parent="." unique_id=75274639]
 offset_left = 672.0
@@ -49,19 +76,20 @@ text = "OPTIONS"
 
 [node name="Label2" type="Label" parent="." unique_id=103202268]
 offset_left = 729.0
-offset_top = 558.0
+offset_top = 564.0
 offset_right = 892.0
-offset_bottom = 644.0
+offset_bottom = 650.0
 theme_override_fonts/font = ExtResource("6_hvj8k")
 theme_override_font_sizes/font_size = 100
 text = "Back"
 
 [node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("6_663nc")]
+visible = false
 
 [node name="brightness" type="HSlider" parent="." unique_id=1031463233]
 offset_left = 391.0
-offset_top = 327.0
-offset_right = 1304.0
+offset_top = 278.0
+offset_right = 954.0
 offset_bottom = 343.0
 min_value = 0.2
 max_value = 1.5
@@ -71,37 +99,45 @@ value = 0.5
 [node name="Label" type="Label" parent="brightness" unique_id=130568514]
 layout_mode = 0
 offset_left = -96.0
-offset_top = -5.0
+offset_top = 20.0
 offset_right = -10.0
-offset_bottom = 18.0
+offset_bottom = 43.0
 theme_override_fonts/font = ExtResource("5_663nc")
 text = "Brightness"
 
 [node name="volume" type="HSlider" parent="." unique_id=702707083]
 offset_left = 388.0
 offset_top = 373.0
-offset_right = 1302.0
-offset_bottom = 389.0
+offset_right = 953.0
+offset_bottom = 428.0
 max_value = 15.0
 
 [node name="Label" type="Label" parent="volume" unique_id=1474906284]
 layout_mode = 0
-offset_left = -93.0
-offset_top = -5.0
-offset_right = -34.0
-offset_bottom = 18.0
+offset_left = -94.0
+offset_top = 16.0
+offset_right = -35.0
+offset_bottom = 39.0
 theme_override_fonts/font = ExtResource("5_663nc")
 text = "Volume"
 
 [node name="back to menu" type="Button" parent="." unique_id=1620705333]
-offset_left = 688.0
-offset_top = 528.0
-offset_right = 939.0
-offset_bottom = 672.0
+offset_left = 684.0
+offset_top = 531.0
+offset_right = 935.0
+offset_bottom = 675.0
 theme_override_fonts/font = ExtResource("5_663nc")
 theme_override_font_sizes/font_size = 50
+flat = true
+
+[node name="controls" type="Button" parent="." unique_id=1602118529]
+offset_left = 1036.0
+offset_top = 280.0
+offset_right = 1322.0
+offset_bottom = 429.0
 flat = true
 
 [connection signal="value_changed" from="brightness" to="." method="_on_brightness_value_changed"]
 [connection signal="value_changed" from="volume" to="." method="_on_volume_value_changed"]
 [connection signal="pressed" from="back to menu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]

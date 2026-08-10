@@ -278,6 +278,7 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_y3aq0")
 
 [node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("8_y3aq0")]
+visible = false
 position = Vector2(-3204, -1047)
 scale = Vector2(5.7676105, 3.8034294)
 

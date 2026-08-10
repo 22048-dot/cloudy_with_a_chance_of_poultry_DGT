@@ -121,6 +121,7 @@ text = "START"
 position = Vector2(875, 493)
 
 [node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("8_h2ono")]
+visible = false
 
 [node name="Back" type="Button" parent="." unique_id=2062692207]
 offset_left = 677.0
