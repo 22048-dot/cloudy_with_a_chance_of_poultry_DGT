@@ -8,6 +8,9 @@ func _ready():
 func _process(delta):
 	position.y += speed * delta
 
+	if position.y > 1750:
+		queue_free()
+
 func _on_hit(body):
 
 	print("EGG HIT")

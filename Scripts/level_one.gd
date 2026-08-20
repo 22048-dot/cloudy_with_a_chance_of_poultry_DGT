@@ -7,10 +7,14 @@ extends Node2D
 
 var score = 0
 var lives = 3
-var highscore = score
+
 
 func _ready() -> void:
 	SceneTransitionAnimation.play("fade_in")
+
+	$"CanvasLayer/Score_label".text = "Score: " + str(score)
+	$"CanvasLayer/Hiscore_label".text = "Highscore: " + str(HisccoreSave.highscore)
+
 
 func _on_timer_timeout() -> void:
 	var item
@@ -29,12 +33,16 @@ func _on_timer_timeout() -> void:
 
 	add_child(item)
 
+
 func add_score():
 	score += 1
-	if score > highscore:
-		highscore = score
-		$"CanvasLayer/Score_label".text = "Score: " + str(score)
-		$"CanvasLayer/Hiscore_label".text = "Highscore: " + str(highscore)
+
+	if score > HisccoreSave.highscore:
+		HisccoreSave.highscore = score
+
+	$"CanvasLayer/Score_label".text = "Score: " + str(score)
+	$"CanvasLayer/Hiscore_label".text = "Highscore: " + str(HisccoreSave.highscore)
+
 
 func lose_life():
 	lives -= 1
@@ -43,6 +51,7 @@ func lose_life():
 
 	if lives <= 0:
 		game_over()
+
 
 func game_over():
 	print("GAME OVER")
