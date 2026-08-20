@@ -1,3 +1,93 @@
 [gd_scene format=3 uid="uid://bm0lt2xisonhl"]
 
+[ext_resource type="Script" uid="uid://dkg6l5q1aki1v" path="res://Scenes/pause_menu.gd" id="1_1och7"]
+[ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="1_k0w1u"]
+[ext_resource type="Texture2D" uid="uid://bj6jsft2j8vyx" path="res://Art/button_icon.png" id="2_1och7"]
+
 [node name="PauseMenu" type="Node2D" unique_id=2140519633]
+process_mode = 3
+script = ExtResource("1_1och7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1692588793]
+offset_left = -209.0
+offset_top = -159.0
+offset_right = 1362.0
+offset_bottom = 836.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Label" type="Label" parent="." unique_id=1772552949]
+offset_left = 253.0
+offset_top = 92.0
+offset_right = 914.0
+offset_bottom = 296.1667
+theme_override_fonts/font = ExtResource("1_k0w1u")
+theme_override_font_sizes/font_size = 200
+text = "PAUSED"
+
+[node name="ButtonIcon" type="Sprite2D" parent="." unique_id=300701605]
+position = Vector2(207, 501)
+scale = Vector2(3.4531248, 3.96875)
+texture = ExtResource("2_1och7")
+
+[node name="Label2" type="Label" parent="." unique_id=1746185519]
+offset_left = 152.0
+offset_top = 463.0
+offset_right = 263.0
+offset_bottom = 514.0417
+theme_override_fonts/font = ExtResource("1_k0w1u")
+theme_override_font_sizes/font_size = 50
+text = "MENU"
+
+[node name="Menu" type="Button" parent="." unique_id=1577687000]
+offset_left = 108.0
+offset_top = 449.00003
+offset_right = 133.67184
+offset_bottom = 458.74228
+scale = Vector2(7.7906365, 9.443391)
+flat = true
+
+[node name="ButtonIcon2" type="Sprite2D" parent="." unique_id=1673336076]
+position = Vector2(572, 502.00003)
+scale = Vector2(3.3554695, 3.824218)
+texture = ExtResource("2_1och7")
+
+[node name="Label4" type="Label" parent="." unique_id=325595804]
+offset_left = 516.0
+offset_top = 465.0
+offset_right = 627.0
+offset_bottom = 516.0417
+theme_override_fonts/font = ExtResource("1_k0w1u")
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="Play" type="Button" parent="." unique_id=103951779]
+offset_left = 474.0
+offset_top = 453.0
+offset_right = 664.0
+offset_bottom = 541.0
+flat = true
+
+[node name="ButtonIcon3" type="Sprite2D" parent="." unique_id=953356445]
+position = Vector2(941.5, 507.5)
+scale = Vector2(3.3593745, 3.6718743)
+texture = ExtResource("2_1och7")
+
+[node name="Label3" type="Label" parent="." unique_id=2008393109]
+offset_left = 893.0
+offset_top = 474.0
+offset_right = 1004.0
+offset_bottom = 525.0417
+theme_override_fonts/font = ExtResource("1_k0w1u")
+theme_override_font_sizes/font_size = 50
+text = "EXIT"
+
+[node name="Exit" type="Button" parent="." unique_id=310278849]
+offset_left = 847.0
+offset_top = 456.0
+offset_right = 1039.0
+offset_bottom = 538.0
+flat = true
+
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

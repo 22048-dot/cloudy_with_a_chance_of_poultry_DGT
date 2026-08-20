@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bk3a5asxa7ytj" path="res://Art/grass platform tilemap.png" id="5_b7vm3"]
 [ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="7_3lrk7"]
 [ext_resource type="PackedScene" uid="uid://sf1faejkf50x" path="res://Scenes/scene_transition_animation.tscn" id="8_y3aq0"]
+[ext_resource type="PackedScene" uid="uid://bm0lt2xisonhl" path="res://Scenes/pause_menu.tscn" id="9_ys0qe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gni6d"]
 texture = ExtResource("5_b7vm3")
@@ -177,10 +178,6 @@ position = Vector2(1801, 1130.25)
 scale = Vector2(20.454544, 20.156252)
 texture = ExtResource("2_gni6d")
 
-[node name="Player_node" parent="." unique_id=1207532806 instance=ExtResource("1_lvfns")]
-position = Vector2(391, 1667)
-scale = Vector2(2.0070562, 2.014731)
-
 [node name="Platforms" type="TileMapLayer" parent="." unique_id=325695681]
 position = Vector2(-991, -1683)
 scale = Vector2(2.95679, 3.4135814)
@@ -207,6 +204,14 @@ texture = ExtResource("4_gni6d")
 position = Vector2(1784, 1082)
 scale = Vector2(49.806602, 52.57214)
 texture = ExtResource("4_gni6d")
+
+[node name="Player_node" parent="." unique_id=1207532806 instance=ExtResource("1_lvfns")]
+position = Vector2(390.99988, 1667.0005)
+scale = Vector2(2.007056, 2.014731)
+
+[node name="PauseMenu" parent="Player_node" unique_id=2140519633 instance=ExtResource("9_ys0qe")]
+position = Vector2(-1023.38934, -693.88947)
+scale = Vector2(1.802996, 1.875509)
 
 [node name="Timer" type="Timer" parent="." unique_id=1423531204]
 autostart = true
