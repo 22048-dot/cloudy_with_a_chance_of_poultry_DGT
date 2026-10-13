@@ -8,6 +8,7 @@ func _ready() -> void:
 	SceneTransitionAnimation.play("fade_in")
 	tut_play.play("controls")
 
+# Fadeout animation, then change the scene to options
 func _on_back_pressed() -> void:
 	SceneTransitionAnimation.play("fade_out")
 	await get_tree().create_timer(0.5).timeout

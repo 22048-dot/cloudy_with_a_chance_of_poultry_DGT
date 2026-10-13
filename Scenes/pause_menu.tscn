@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bm0lt2xisonhl"]
 
-[ext_resource type="Script" uid="uid://dkg6l5q1aki1v" path="res://Scenes/pause_menu.gd" id="1_1och7"]
+[ext_resource type="Script" uid="uid://dkg6l5q1aki1v" path="res://Scripts/pause_menu.gd" id="1_1och7"]
 [ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="1_k0w1u"]
 [ext_resource type="Texture2D" uid="uid://bj6jsft2j8vyx" path="res://Art/button_icon.png" id="2_1och7"]
 
@@ -9,10 +9,10 @@ process_mode = 3
 script = ExtResource("1_1och7")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1692588793]
-offset_left = -209.0
-offset_top = -159.0
-offset_right = 1362.0
-offset_bottom = 836.0
+offset_left = -528.0
+offset_top = -429.0
+offset_right = 1691.0
+offset_bottom = 1158.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="Label" type="Label" parent="." unique_id=1772552949]

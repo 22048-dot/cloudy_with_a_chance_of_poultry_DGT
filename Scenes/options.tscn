@@ -84,7 +84,6 @@ theme_override_font_sizes/font_size = 100
 text = "Back"
 
 [node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("6_663nc")]
-visible = false
 
 [node name="brightness" type="HSlider" parent="." unique_id=1031463233]
 offset_left = 391.0

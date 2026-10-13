@@ -17,7 +17,6 @@ func _input(event):
 	if event.is_action_pressed("Pause"):
 		toggle_pause()
 
-
 func toggle_pause():
 	visible = !visible
 	get_tree().paused = visible
