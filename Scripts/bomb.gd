@@ -6,7 +6,7 @@ var speed = 400
 func _ready():
 	body_entered.connect(_on_hit)
 
-# Controls the speed that the item falls and removes egg once it reaches the boundry
+# Controls the speed that the item falls and removes egg once it reaches the boundry.
 func _process(delta):
 	position.y += speed * delta
 	if position.y > 1750:

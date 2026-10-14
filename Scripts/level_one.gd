@@ -14,7 +14,7 @@ func _ready() -> void:
 	$"CanvasLayer/Score_label".text = "Score: " + str(score)
 	$"CanvasLayer/Hiscore_label".text = "Highscore: " + str(HisccoreSave.highscore)
 
-# Randomises the position that the items fall at a random position within a range.
+# Randomises the position that the items fall at a random position within a certain range.
 func _on_timer_timeout() -> void:
 	var item
 
@@ -44,6 +44,7 @@ func lose_life():
 	$"CanvasLayer/Lives label".text = "Lives: " + str(lives)
 	if lives <= 0:
 		game_over()
+
 # Ends the player's game when all lives are lost, plays a scene transition animation, and changes the scene to the death screen.
 func game_over():
 	print("GAME OVER")

@@ -8,12 +8,13 @@ func _ready() -> void:
 	SceneTransitionAnimation.play("fade_in")
 	tut_play.play("show_tut")
 
+# Opens the main menu scene.
 func _on_back_pressed() -> void:
 	SceneTransitionAnimation.play("fade_out")
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
-
+# Opens the level one scene.
 func _on_skip_pressed() -> void:
 	SceneTransitionAnimation.play("fade_out")
 	await get_tree().create_timer(0.5).timeout
