@@ -1,6 +1,7 @@
 extends Area2D
 
 var speed = 400
+@onready var audio_player = $AudioStreamPlayer2D
 
 # Recognises that the item is touched by the player
 func _ready():
@@ -16,5 +17,6 @@ func _process(delta):
 func _on_hit(body):
 	print("EGG HIT")
 	if body.name == "Player_node":
+		audio_player.play()
 		get_parent().add_score()
 		queue_free()

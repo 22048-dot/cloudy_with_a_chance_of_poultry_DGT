@@ -282,7 +282,17 @@ theme_override_fonts/font = ExtResource("7_3lrk7")
 theme_override_font_sizes/font_size = 50
 text = "Lives: 3"
 
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1706721843]
+offset_left = 1334.0
+offset_top = -5.0
+offset_right = 1404.0
+offset_bottom = 18.000004
+scale = Vector2(3.9545698, 4.019925)
+theme_override_fonts/font = ExtResource("7_3lrk7")
+text = "P - Pause"
+
 [node name="SceneTransitionAnimation" parent="." unique_id=1162129556 instance=ExtResource("8_y3aq0")]
+visible = false
 position = Vector2(-3204, -1047)
 scale = Vector2(5.7676105, 3.8034294)
 

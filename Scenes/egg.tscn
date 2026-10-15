@@ -3,6 +3,7 @@
 [ext_resource type="Shader" uid="uid://j70rbs5jvhmg" path="res://Shaders/egg_glow.gdshader" id="1_1iuog"]
 [ext_resource type="Script" uid="uid://cn8s7333lb450" path="res://Scripts/egg.gd" id="1_85tk0"]
 [ext_resource type="Texture2D" uid="uid://cxsapbnnvb275" path="res://Art/egg.png" id="2_85tk0"]
+[ext_resource type="AudioStream" uid="uid://008fn12wbgcp" path="res://Sounds_design/soundreality-pop-reverb-423718.mp3" id="4_io5x2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7piv4"]
 shader = ExtResource("1_1iuog")
@@ -32,5 +33,10 @@ texture = ExtResource("2_85tk0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=240438768]
 scale = Vector2(7.555896, 9.204123)
 shape = SubResource("CircleShape2D_1iuog")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2000560560]
+stream = ExtResource("4_io5x2")
+volume_db = 5.0
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

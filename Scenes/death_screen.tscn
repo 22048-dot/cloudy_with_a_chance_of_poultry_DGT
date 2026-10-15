@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://djif2jh1cfmfn" path="res://Art/panel.png" id="5_tpvs2"]
 [ext_resource type="FontFile" uid="uid://dqueh5wm7yb00" path="res://Art/ARCADECLASSIC.TTF" id="5_vb6s7"]
 [ext_resource type="PackedScene" uid="uid://sf1faejkf50x" path="res://Scenes/scene_transition_animation.tscn" id="7_l3qio"]
+[ext_resource type="AudioStream" uid="uid://4r25hjyp3v5g" path="res://Sounds_design/shidenbeatsmusic-no-luck-too-bad-disappointing-sound-effect-112943.mp3" id="8_dmfwj"]
 
 [sub_resource type="Animation" id="Animation_tseak"]
 length = 0.001
@@ -106,5 +107,9 @@ offset_right = 261.60938
 offset_bottom = 615.4069
 scale = Vector2(10.443523, 4.374007)
 flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=299274734]
+stream = ExtResource("8_dmfwj")
+autoplay = true
 
 [connection signal="pressed" from="back_to_menu" to="." method="_on_back_to_menu_pressed"]

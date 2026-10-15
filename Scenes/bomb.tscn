@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://coc7rmw8hbg3r" path="res://Scripts/bomb.gd" id="1_kdyat"]
 [ext_resource type="Shader" uid="uid://dyuupmetmov76" path="res://Shaders/bomb_evil_aura.gdshader" id="2_2fiif"]
 [ext_resource type="Texture2D" uid="uid://8j4xjphsx4yw" path="res://Art/bomb.png" id="2_kdyat"]
+[ext_resource type="AudioStream" uid="uid://d2pqcdri6klht" path="res://Sounds_design/universfield-error-notification-05-199276.mp3" id="4_60xmw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_60xmw"]
 shader = ExtResource("2_2fiif")
@@ -33,5 +34,10 @@ position = Vector2(-0.99999934, 14.000004)
 rotation = -3.1415925
 scale = Vector2(9.711538, 9.457143)
 shape = SubResource("RectangleShape2D_4fn8o")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=712029159]
+stream = ExtResource("4_60xmw")
+volume_db = 5.0
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
